@@ -137,4 +137,8 @@ class OnBoarding {
   String get middleName => 'Middle Name';
   String get lastName => 'Last Name';
   String get optional => 'Optional';
+  String get enterYourEmail => 'Enter your Email ID';
+  String get enterYourEmailDesc =>
+      'This is to ensure that you receive all case related updates';
+  String get emailId => 'Email ID';
 }
