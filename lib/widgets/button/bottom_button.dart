@@ -4,9 +4,15 @@ import 'package:digit_ui_components/digit_components.dart';
 import 'package:flutter/material.dart';
 
 class BottomButton extends StatelessWidget {
-  const BottomButton({super.key, required this.onPressed, this.label});
+  const BottomButton({
+    super.key,
+    required this.onPressed,
+    this.onPressCheckbox,
+    this.label,
+  });
 
   final Function() onPressed;
+  final Function(bool)? onPressCheckbox;
   final String? label;
 
   @override
@@ -33,12 +39,30 @@ class BottomButton extends StatelessWidget {
         // ),
         Padding(
           padding: EdgeInsets.symmetric(vertical: spacer6, horizontal: spacer4),
-          child: DigitButton(
-            label: context.translate(this.label ?? i18.onBoarding.continueText),
-            onPressed: onPressed,
-            type: DigitButtonType.primary,
-            size: DigitButtonSize.large,
-            mainAxisSize: MainAxisSize.max,
+          child: Column(
+            children: [
+              onPressCheckbox != null
+                  ? Column(
+                    children: [
+                      DigitCheckbox(
+                        label: context.translate(i18.onBoarding.agreeTerms),
+                        onChanged: onPressCheckbox ?? (bool) {},
+                      ),
+                      SizedBox(height: spacer4),
+                    ],
+                  )
+                  : Container(),
+
+              DigitButton(
+                label: context.translate(
+                  this.label ?? i18.onBoarding.continueText,
+                ),
+                onPressed: onPressed,
+                type: DigitButtonType.primary,
+                size: DigitButtonSize.large,
+                mainAxisSize: MainAxisSize.max,
+              ),
+            ],
           ),
         ),
         Positioned(

@@ -68,7 +68,7 @@ class _EnterAadhaarPageState extends State<EnterAadhaarPage> {
                       label: context.translate(i18.onBoarding.verify),
                       onPressed: () {
                         Navigator.of(ctx).pop();
-                        context.router.push(AdvocateVerificationRoute());
+                        context.router.push(UploadIDRoute());
                       },
                       type: DigitButtonType.primary,
                       size: DigitButtonSize.large,

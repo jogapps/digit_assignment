@@ -8,11 +8,13 @@ class OnBoardingLayout extends StatelessWidget {
     super.key,
     required this.children,
     required this.onPressed,
+    this.onPressCheckbox,
     this.buttonLabel,
   });
 
   final List<Widget> children;
   final dynamic Function() onPressed;
+  final Function(bool)? onPressCheckbox;
   final String? buttonLabel;
 
   @override
@@ -27,7 +29,11 @@ class OnBoardingLayout extends StatelessWidget {
             showBackNavigation: true,
             showHelp: true,
           ),
-          footer: BottomButton(onPressed: onPressed, label: buttonLabel),
+          footer: BottomButton(
+            onPressed: onPressed,
+            label: buttonLabel,
+            onPressCheckbox: onPressCheckbox,
+          ),
           children: children,
         ),
       ),

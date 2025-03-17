@@ -27,6 +27,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const AdvocateVerificationPage(),
       );
     },
+    CompletionRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CompletionPage(),
+      );
+    },
     EnterAadhaarRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -63,10 +69,22 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const SplashPage(),
       );
     },
+    TermsAndConditionsRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const TermsAndConditionsPage(),
+      );
+    },
     UnauthenticatedRouteWrapper.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const UnauthenticatedScreenWrapper(),
+      );
+    },
+    UploadIDRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const UploadIDPage(),
       );
     },
     VerifyIdentityRoute.name: (routeData) {
@@ -102,6 +120,20 @@ class AdvocateVerificationRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'AdvocateVerificationRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [CompletionPage]
+class CompletionRoute extends PageRouteInfo<void> {
+  const CompletionRoute({List<PageRouteInfo>? children})
+      : super(
+          CompletionRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CompletionRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -191,6 +223,20 @@ class SplashRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [TermsAndConditionsPage]
+class TermsAndConditionsRoute extends PageRouteInfo<void> {
+  const TermsAndConditionsRoute({List<PageRouteInfo>? children})
+      : super(
+          TermsAndConditionsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'TermsAndConditionsRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [UnauthenticatedScreenWrapper]
 class UnauthenticatedRouteWrapper extends PageRouteInfo<void> {
   const UnauthenticatedRouteWrapper({List<PageRouteInfo>? children})
@@ -200,6 +246,20 @@ class UnauthenticatedRouteWrapper extends PageRouteInfo<void> {
         );
 
   static const String name = 'UnauthenticatedRouteWrapper';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [UploadIDPage]
+class UploadIDRoute extends PageRouteInfo<void> {
+  const UploadIDRoute({List<PageRouteInfo>? children})
+      : super(
+          UploadIDRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'UploadIDRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

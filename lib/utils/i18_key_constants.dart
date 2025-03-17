@@ -162,4 +162,28 @@ class OnBoarding {
   String get enterAadhaarNumberDesc =>
       'Please enter your 12 digit Aadhaar number ';
   String get verifyYourAadhaar => 'Verify your Aadhaar';
+  String get uploadYourId => 'Upload your ID';
+  String get uploadYourIdDesc => 'Please upload a valid government issued ID ';
+  String get typeOfId => 'Type of ID';
+  String get uploadIdProof => 'Upload ID proof';
+  String get termAndCondition => 'Terms and Conditions';
+  String get termAndConditionDesc =>
+      "Before diving in, we'll need to verify your identity for account setup ";
+  String get terms1 =>
+      "By using this app, you agree to abide by our community guidelines, fostering a respectful and inclusive environment for all users";
+  String get terms2 =>
+      "Your privacy is paramount. Rest assured, your data is securely handled and never shared with third parties without your consent";
+  String get terms3 =>
+      "Please refrain from engaging in any unlawful activities while using our app, ensuring a safe and compliant platform for everyone";
+  String get terms4 =>
+      "We reserve the right to modify our services and terms at any time, keeping you informed of any updates through our communication channels";
+  String get agreeTerms => "I agree to the above terms and conditions";
+  String get waitingTitle => 'Your registration is waiting approval';
+  String get waitingTitleDesc =>
+      "Your registration (ID: XXXXXXXXX) is in progress. It takes 2-3 days for verification. You'll get an SMS when it's done.";
+  String get successTitle => 'You’ve been registered successfully!';
+  String get successTitleDesc =>
+      'You can now proceed to file a case or join an on-going case';
+  String get fileACase => 'File a Case';
+  String get joinACase => 'Join a Case';
 }

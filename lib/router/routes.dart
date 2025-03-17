@@ -8,4 +8,7 @@ class Routes {
   static const enterAddress = 'enter-address';
   static const verifyIdentity = 'verify-identity';
   static const enterAadhaar = 'enter-aadhaar';
+  static const uploadID = 'upload-id';
+  static const termsAndConditions = 'terms-and-conditions';
+  static const completion = 'completion';
 }
