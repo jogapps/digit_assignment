@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:digit_assignment/pages/about_selection.dart';
 import 'package:digit_assignment/pages/advocate_verification.dart';
+import 'package:digit_assignment/pages/enter_address.dart';
 import 'package:digit_assignment/pages/enter_email.dart';
 import 'package:digit_assignment/pages/enter_mobile.dart';
 import 'package:digit_assignment/pages/enter_name.dart';
@@ -32,6 +33,7 @@ class AppRouter extends _$AppRouter {
         ),
         AutoRoute(page: EnterNameRoute.page, path: Routes.enterName),
         AutoRoute(page: EnterEmailRoute.page, path: Routes.enterEmail),
+        AutoRoute(page: EnterAddressRoute.page, path: Routes.enterAddress),
       ],
     ),
   ];

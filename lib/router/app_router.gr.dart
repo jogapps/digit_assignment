@@ -27,6 +27,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const AdvocateVerificationPage(),
       );
     },
+    EnterAddressRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const EnterAddressPage(),
+      );
+    },
     EnterEmailRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -84,6 +90,20 @@ class AdvocateVerificationRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'AdvocateVerificationRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [EnterAddressPage]
+class EnterAddressRoute extends PageRouteInfo<void> {
+  const EnterAddressRoute({List<PageRouteInfo>? children})
+      : super(
+          EnterAddressRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'EnterAddressRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

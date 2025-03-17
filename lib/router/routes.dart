@@ -5,4 +5,5 @@ class Routes {
   static const advocateVerification = 'advocate-verification';
   static const enterName = 'enter-name';
   static const enterEmail = 'enter-email';
+  static const enterAddress = 'enter-address';
 }

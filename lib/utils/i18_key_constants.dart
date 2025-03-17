@@ -141,4 +141,12 @@ class OnBoarding {
   String get enterYourEmailDesc =>
       'This is to ensure that you receive all case related updates';
   String get emailId => 'Email ID';
+  String get enterYourAddress => 'Enter your address';
+  String get searchBuildingStreet => 'Search for a building, street, or area';
+  String get pinCode => 'Pincode';
+  String get state => 'State';
+  String get district => 'District';
+  String get cityTown => 'City / town';
+  String get locality => 'Locality / Street Name / Area';
+  String get building => 'Building Name / Door number ';
 }

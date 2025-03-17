@@ -1,5 +1,4 @@
-import 'package:auto_route/annotations.dart';
-import 'package:auto_route/auto_route.dart';
+import 'package:digit_assignment/router/app_router.dart';
 import 'package:digit_assignment/utils/extensions.dart';
 import 'package:digit_assignment/utils/i18_key_constants.dart' as i18;
 import 'package:digit_assignment/widgets/button/bottom_button.dart';
@@ -33,7 +32,9 @@ class _EnterEmailPageState extends State<EnterEmailPage> {
             showBackNavigation: true,
             showHelp: true,
           ),
-          footer: BottomButton(onPressed: () => {}),
+          footer: BottomButton(
+            onPressed: () => context.router.push(EnterAddressRoute()),
+          ),
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: spacer4),
