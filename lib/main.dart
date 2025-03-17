@@ -11,6 +11,7 @@ import 'package:digit_assignment/utils/constants.dart';
 import 'package:digit_assignment/utils/env_config.dart';
 import 'package:digit_data_model/data_model.init.dart';
 import 'package:digit_ui_components/digit_components.dart';
+import 'package:digit_ui_components/theme/ComponentTheme/button_theme.dart';
 import 'package:digit_ui_components/utils/app_logger.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
@@ -66,7 +67,12 @@ class _MainAppState extends State<MainApp> {
         child: BlocBuilder<AppInitialization, InitState>(
           builder:
               (context, state) => state.maybeWhen(
-                orElse: () => const Center(child: Text('error Initializing')),
+                orElse:
+                    () => Scaffold(
+                      backgroundColor:
+                          DigitTheme.instance.colorScheme.onTertiary,
+                      body: const Center(child: CircularProgressIndicator()),
+                    ),
                 initialized: (appConfig, serviceRegistryModel) {
                   final config = appConfig.appConfig?.appConfig!.first;
 
@@ -93,11 +99,21 @@ class _MainAppState extends State<MainApp> {
                           scaffoldMessengerKey: scaffoldMessengerKey,
                           theme: DigitTheme.instance.mobileTheme.copyWith(
                             primaryColor: KColors.primary,
+                            textSelectionTheme: TextSelectionThemeData(
+                              //cursorColor: KColors.primary,
+                              selectionColor: KColors.primary.withOpacity(0.3),
+                              selectionHandleColor: KColors.primary,
+                            ),
+                            extensions: <ThemeExtension<dynamic>>[
+                              DigitButtonThemeData.defaultTheme(
+                                context,
+                              ).copyWith(DigitButtonColor: KColors.primary),
+                              // Add other theme extensions if needed
+                            ],
                           ),
                           routerDelegate: _approuter.delegate(),
                           routeInformationParser:
                               _approuter.defaultRouteParser(),
-                          // Define supported locales based on available languages
                           supportedLocales:
                               languages != null
                                   ? languages.map((e) {
