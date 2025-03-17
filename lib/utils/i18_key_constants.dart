@@ -118,11 +118,12 @@ class OnBoarding {
   String get pleaseEnterMobile => 'Please enter your mobile number';
   String get pleaseEnterMobileDesc =>
       'You will use this as your log in. We will send you an OTP to verify';
+  String get getOtp => 'Get OTP';
   String get mobileNo => 'Mobile No';
   String get verifyOtp => 'Verify Mobile Number';
   String get verifyOtpDesc => 'Enter the OTP sent to ';
   String get verify => 'Verify';
-  String get requestOtp => 'Request a new otp in 0.25 seconds';
+  String get requestOtp => 'Request a new otp in 0.25';
   String get advocateVerification => 'Advocate Verification';
   String get advocateVerificationDesc =>
       'To ensure the authenticity of your profile, please provide the following details for us to verify';
@@ -157,4 +158,8 @@ class OnBoarding {
       'An instant verification that will provide a verified status against your profile ';
   String get otherId => 'Other ID';
   String get otherIdDesc => 'Manual verification by uploading government ID';
+  String get enterAadhaarNumber => 'Enter your Aadhaar Number';
+  String get enterAadhaarNumberDesc =>
+      'Please enter your 12 digit Aadhaar number ';
+  String get verifyYourAadhaar => 'Verify your Aadhaar';
 }

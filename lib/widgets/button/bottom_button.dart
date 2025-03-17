@@ -1,11 +1,13 @@
+import 'package:digit_assignment/utils/extensions.dart';
 import 'package:digit_assignment/utils/i18_key_constants.dart' as i18;
 import 'package:digit_ui_components/digit_components.dart';
 import 'package:flutter/material.dart';
 
 class BottomButton extends StatelessWidget {
-  const BottomButton({super.key, required this.onPressed});
+  const BottomButton({super.key, required this.onPressed, this.label});
 
   final Function() onPressed;
+  final String? label;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class BottomButton extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(vertical: spacer6, horizontal: spacer4),
           child: DigitButton(
-            label: i18.onBoarding.continueText,
+            label: context.translate(this.label ?? i18.onBoarding.continueText),
             onPressed: onPressed,
             type: DigitButtonType.primary,
             size: DigitButtonSize.large,
