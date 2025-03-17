@@ -7,6 +7,7 @@ import 'package:digit_assignment/pages/enter_mobile.dart';
 import 'package:digit_assignment/pages/enter_name.dart';
 import 'package:digit_assignment/pages/splash.dart';
 import 'package:digit_assignment/pages/unauthenticated.dart';
+import 'package:digit_assignment/pages/vierify_identity.dart';
 import 'package:digit_assignment/router/routes.dart';
 
 export 'package:auto_route/auto_route.dart';
@@ -34,6 +35,7 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: EnterNameRoute.page, path: Routes.enterName),
         AutoRoute(page: EnterEmailRoute.page, path: Routes.enterEmail),
         AutoRoute(page: EnterAddressRoute.page, path: Routes.enterAddress),
+        AutoRoute(page: VerifyIdentityRoute.page, path: Routes.verifyIdentity),
       ],
     ),
   ];

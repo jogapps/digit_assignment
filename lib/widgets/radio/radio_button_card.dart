@@ -1,12 +1,10 @@
-import 'package:digit_ui_components/enum/app_enums.dart';
 import 'package:digit_ui_components/theme/colors.dart';
 import 'package:digit_ui_components/theme/digit_extended_theme.dart';
 import 'package:digit_ui_components/theme/spacers.dart';
-import 'package:digit_ui_components/widgets/atoms/digit_divider.dart';
 import 'package:flutter/material.dart';
 
-class RadioButtonList extends StatelessWidget {
-  const RadioButtonList({
+class RadioButtonCard extends StatelessWidget {
+  const RadioButtonCard({
     super.key,
     required this.title,
     this.description,
@@ -26,10 +24,15 @@ class RadioButtonList extends StatelessWidget {
     final theme = Theme.of(context);
     final textTheme = theme.digitTextTheme(context);
 
-    return Column(
-      children: [
-        Transform.translate(
-          offset: const Offset(-spacer2, 0),
+    return Padding(
+      padding: const EdgeInsets.only(left: spacer2),
+      child: Transform.translate(
+        offset: const Offset(-spacer2, 0),
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: Light().genericDivider),
+            borderRadius: BorderRadius.circular(spacer2),
+          ),
           child: RadioListTile(
             activeColor: Light().primary1,
             radioScaleFactor: 1.3,
@@ -41,7 +44,7 @@ class RadioButtonList extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: textTheme.headingM.copyWith(fontSize: spacer5),
+                    style: textTheme.headingM,
                     textAlign: TextAlign.start,
                   ),
                   SizedBox(height: spacer2),
@@ -59,11 +62,7 @@ class RadioButtonList extends StatelessWidget {
             onChanged: onChanged,
           ),
         ),
-        Transform.translate(
-          offset: const Offset(0, spacer4),
-          child: DigitDivider(dividerType: DividerType.small),
-        ),
-      ],
+      ),
     );
   }
 }

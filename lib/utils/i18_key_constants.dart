@@ -149,4 +149,12 @@ class OnBoarding {
   String get cityTown => 'City / town';
   String get locality => 'Locality / Street Name / Area';
   String get building => 'Building Name / Door number ';
+  String get verifyIdentity => 'Verify your Identity';
+  String get verifyIdentityDesc =>
+      "Before diving in, we'll need to verify your identity for account setup ";
+  String get aadhaar => 'Aadhaar (Recommended)';
+  String get aadhaarDesc =>
+      'An instant verification that will provide a verified status against your profile ';
+  String get otherId => 'Other ID';
+  String get otherIdDesc => 'Manual verification by uploading government ID';
 }

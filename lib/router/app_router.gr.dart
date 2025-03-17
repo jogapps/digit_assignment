@@ -63,6 +63,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const UnauthenticatedScreenWrapper(),
       );
     },
+    VerifyIdentityRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const VerifyIdentityPage(),
+      );
+    },
   };
 }
 
@@ -174,6 +180,20 @@ class UnauthenticatedRouteWrapper extends PageRouteInfo<void> {
         );
 
   static const String name = 'UnauthenticatedRouteWrapper';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [VerifyIdentityPage]
+class VerifyIdentityRoute extends PageRouteInfo<void> {
+  const VerifyIdentityRoute({List<PageRouteInfo>? children})
+      : super(
+          VerifyIdentityRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'VerifyIdentityRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

@@ -6,4 +6,5 @@ class Routes {
   static const enterName = 'enter-name';
   static const enterEmail = 'enter-email';
   static const enterAddress = 'enter-address';
+  static const verifyIdentity = 'verify-identity';
 }
